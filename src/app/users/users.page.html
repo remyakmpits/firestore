@@ -1,0 +1,16 @@
+<ion-content padding>
+
+  <ion-grid>
+  
+    <ion-row *ngFor="let user of users " (click)="selectChatWithId(user.uid)">
+   
+        <div style="height: 50px;" *ngIf = " user.uid != currentUser.uid" >
+        <b>{{ user.uid }}</b><br>
+        <span>{{ user.email }}
+        </span>
+      </div>
+       
+   
+    </ion-row>
+  </ion-grid>
+</ion-content>
